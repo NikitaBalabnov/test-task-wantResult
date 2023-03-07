@@ -18,12 +18,12 @@ function App() {
   },[])
   const router = createBrowserRouter([
     {
-      path: '/',
+      path: '/test-task-wantResult',
       element: <LayoutPage />,
       errorElement: <Error />,
       children: [
         {
-          path: '/',
+          path: '/test-task-wantResult',
           element: <Login />,
         },
         {
