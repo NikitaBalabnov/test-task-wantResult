@@ -5,17 +5,20 @@
   "type": "module",
   "homepage": "https://nikitabalabnov.github.io/test-task-wantResult/",
   "scripts": {
-    "dev": "vite",
+    "dev": "concurrently \"npm run server\" \"vite\" ",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "server":"json-server -w server/db.json -p 3001"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.1",
     "@types/react-router-dom": "^5.3.3",
     "antd": "^5.1.2",
     "axios": "^1.2.2",
+    "concurrently": "^7.6.0",
+    "json-server": "^0.17.2",
     "moment": "^2.29.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
