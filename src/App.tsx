@@ -18,7 +18,7 @@ function App() {
   },[])
   const router = createBrowserRouter([
     {
-      path: '/test-task-wantResult',
+      path: '/',
       element: <LayoutPage />,
       errorElement: <Error />,
       children: [
@@ -29,7 +29,7 @@ function App() {
         {
           path: "calendar",
           element: (
-            <RequireAuth path="/">
+            <RequireAuth path="/test-task-wantResult">
               <Caledar />
             </RequireAuth>
           ),

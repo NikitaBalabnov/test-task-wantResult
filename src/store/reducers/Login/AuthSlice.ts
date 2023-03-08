@@ -11,7 +11,7 @@ export const fetchUsers = createAsyncThunk("events/fetchUsers", async () => {
 export const LoginAPI = createAsyncThunk( 
   "login/LoginAPI",
   async ({ username, password }: IUser, { rejectWithValue }) => {
-    const response = await axios.get<IUser[]>("../../../../public/users.json");
+    const response = await axios.get<IUser[]>("http://localhost:3001/users");
     const mockUser = response.data.find(
       (user) => user.username === username && user.password === password
     );

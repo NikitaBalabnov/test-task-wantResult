@@ -34,7 +34,7 @@ const Navbar = (props: Props) => {
               <div style={{color: '#fff', fontWeight: 'bold', cursor: 'pointer', fontSize: '20px'}} className="">
                 {user.username === 'admin' ? 'Admin' : user.username.toUpperCase()}
               </div>
-              <Link to={"/"}>
+              <Link to={"test-task-wantResult"}>
                 <Button onClick={LogOut} type="primary">
                   Log out
                 </Button>
